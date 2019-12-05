@@ -15,3 +15,62 @@ img {
   width: 300px;
   height: auto;
 }
+
+.nav-bar {
+  display: flex;
+  background-color: #fcbf49;
+  margin: 0;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  justify-content: space-between;
+  padding: 2rem;
+  color: black;
+}
+
+a {
+  font-size: 2rem;
+  text-decoration-color: black;
+}
+
+label {
+  width: ;
+}
+
+.form-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 0.25rem;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.form-section {
+  display: flex;
+  border: 4px solid hotpink;
+  margin-left: 35rem;
+  margin-right: 35rem;
+}
+
+main {
+  background-color: rgb(89, 175, 128);
+}

@@ -43,7 +43,6 @@ const AllEmployees = () => {
                   <h3 className="job-status">
                     Full Time: {item.isFullTime ? 'Yes' : 'No'}
                   </h3>
-                  <h3></h3>
                 </section>
               </section>
             </Link>

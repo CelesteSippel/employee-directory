@@ -37,9 +37,9 @@ const AddEmployee = () => {
         city: city,
         state: state,
         zip: zip,
-        // salary: salary,
+
         ptoHours: ptoHours,
-        isFullTime: true,
+        isFullTime: isFullTime,
         profileImage: profileImage,
       }
     )
@@ -51,7 +51,7 @@ const AddEmployee = () => {
       <h1 className="form">Add Employee</h1>
       <main className="form-section">
         <form onSubmit={submitData} className="add-employee-form">
-          <div>
+          <div className="form-style">
             <label htmlFor="first-name">First Name:</label>
             <input
               onChange={e => {
@@ -61,7 +61,7 @@ const AddEmployee = () => {
               type="text"
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="last-name">Last Name:</label>
             <input
               onChange={e => {
@@ -71,7 +71,7 @@ const AddEmployee = () => {
               type="text"
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="birthday">Date of Birth:</label>
             <input
               onChange={e => {
@@ -81,7 +81,7 @@ const AddEmployee = () => {
               value={birthday}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="hired-date">Hire Date:</label>
             <input
               onChange={e => {
@@ -91,7 +91,7 @@ const AddEmployee = () => {
               value={hireDate}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="job-title">Job Title:</label>
             <input
               onChange={e => {
@@ -101,7 +101,7 @@ const AddEmployee = () => {
               value={jobTitle}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="job-description">Job Description:</label>
             <input
               onChange={e => {
@@ -111,7 +111,7 @@ const AddEmployee = () => {
               value={jobDescription}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="is-full-time">Full-Time:</label>
             <input
               onChange={e => {
@@ -121,7 +121,7 @@ const AddEmployee = () => {
               value={isFullTime}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="phone-number">Phone Number:</label>
             <input
               onChange={e => {
@@ -131,7 +131,7 @@ const AddEmployee = () => {
               value={phoneNumber}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="email-address">email:</label>
             <input
               onChange={e => {
@@ -141,7 +141,7 @@ const AddEmployee = () => {
               value={email}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="address">Address:</label>
             <input
               onChange={e => {
@@ -151,7 +151,7 @@ const AddEmployee = () => {
               value={address}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="city">City:</label>
             <input
               onChange={e => {
@@ -161,7 +161,7 @@ const AddEmployee = () => {
               value={city}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="state">State:</label>
             <input
               onChange={e => {
@@ -171,7 +171,7 @@ const AddEmployee = () => {
               value={state}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="zip">Zip:</label>
             <input
               onChange={e => {
@@ -181,7 +181,7 @@ const AddEmployee = () => {
               value={zip}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="emergency-contact-person">Emergency Contact:</label>
             <input
               onChange={e => {
@@ -191,7 +191,7 @@ const AddEmployee = () => {
               value={emergencyContact}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="emergency-contact-phone">
               Emergency Contact Phone Number:
             </label>
@@ -203,7 +203,7 @@ const AddEmployee = () => {
               value={emergencyContactPhone}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="profileImage">Profile Image:</label>
             <input
               onChange={e => {
@@ -213,7 +213,7 @@ const AddEmployee = () => {
               value={profileImage}
             />
           </div>
-          <div>
+          <div className="form-style">
             <label htmlFor="pto">PTO:</label>
             <input
               onChange={e => {
