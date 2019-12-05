@@ -8,12 +8,16 @@ const AddEmployee = () => {
   const [hireDate, setHireDate] = useState('')
   const [jobTitle, setJobTitle] = useState('')
   const [jobDescription, setJobDescription] = useState('')
-  const [interestingFact, setInterestingFact] = useState('')
+  const [isFullTime, setIsFullTime] = useState(true)
+  const [phoneNumber, setPhoneNumber] = useState('')
+  const [email, setEmail] = useState('')
   const [address, setAddress] = useState('')
   const [city, setCity] = useState('')
   const [state, setState] = useState('')
   const [zip, setZip] = useState('')
-  const [salary, setSalary] = useState('')
+  const [emergencyContact, setEmergencyContact] = useState('')
+  const [emergencyContactPhone, setEmergencyContactPhone] = useState('')
+  const [profileImage, setProfileImage] = useState('')
   const [ptoHours, setPtoHours] = useState('')
 
   const submitData = async event => {
@@ -28,13 +32,15 @@ const AddEmployee = () => {
         hiredDate: hireDate,
         jobTitle: jobTitle,
         jobDescription: jobDescription,
-        interestingFact: interestingFact,
+
         address: address,
         city: city,
         state: state,
         zip: zip,
-        salary: salary,
+        // salary: salary,
         ptoHours: ptoHours,
+        isFullTime: true,
+        profileImage: profileImage,
       }
     )
     console.log(resp.data)
@@ -106,13 +112,33 @@ const AddEmployee = () => {
             />
           </div>
           <div>
-            <label htmlFor="interesting-fact">Interesting Fact:</label>
+            <label htmlFor="is-full-time">Full-Time:</label>
             <input
               onChange={e => {
-                setInterestingFact(e.target.value)
+                setIsFullTime(e.target.value)
               }}
               type="text"
-              value={interestingFact}
+              value={isFullTime}
+            />
+          </div>
+          <div>
+            <label htmlFor="phone-number">Phone Number:</label>
+            <input
+              onChange={e => {
+                setPhoneNumber(e.target.value)
+              }}
+              type="text"
+              value={phoneNumber}
+            />
+          </div>
+          <div>
+            <label htmlFor="email-address">email:</label>
+            <input
+              onChange={e => {
+                setEmail(e.target.value)
+              }}
+              type="text"
+              value={email}
             />
           </div>
           <div>
@@ -156,13 +182,35 @@ const AddEmployee = () => {
             />
           </div>
           <div>
-            <label htmlFor="salary">Salary:</label>
+            <label htmlFor="emergency-contact-person">Emergency Contact:</label>
             <input
               onChange={e => {
-                setSalary(e.target.value)
+                setEmergencyContact(e.target.value)
               }}
               type="text"
-              value={salary}
+              value={emergencyContact}
+            />
+          </div>
+          <div>
+            <label htmlFor="emergency-contact-phone">
+              Emergency Contact Phone Number:
+            </label>
+            <input
+              onChange={e => {
+                setEmergencyContactPhone(e.target.value)
+              }}
+              type="text"
+              value={emergencyContactPhone}
+            />
+          </div>
+          <div>
+            <label htmlFor="profileImage">Profile Image:</label>
+            <input
+              onChange={e => {
+                setProfileImage(e.target.value)
+              }}
+              type="text"
+              value={profileImage}
             />
           </div>
           <div>
