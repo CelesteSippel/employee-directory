@@ -1,5 +1,7 @@
 :root {
-  font: 16px / 1 sans-serif;
+  font: link href=
+    'https://fonts.googleapis.com/css?family=Alex+Brush&display=swap' rel=
+    'stylesheet';
 }
 
 html {
@@ -9,11 +11,12 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  font-family: 'Alex Brush', cursive;
 }
 
 img {
   width: 300px;
-  height: auto;
+  height: 400px;
 }
 
 .nav-bar {
@@ -41,10 +44,6 @@ a {
   text-decoration-color: black;
 }
 
-label {
-  width: ;
-}
-
 .form-style {
   display: flex;
   justify-content: space-between;
@@ -66,11 +65,59 @@ h1 {
 
 .form-section {
   display: flex;
-  border: 4px solid hotpink;
-  margin-left: 35rem;
-  margin-right: 35rem;
+  box-shadow: black 4px 4px 10px;
+  border-radius: 5px;
+  margin-left: 30rem;
+  margin-right: 30rem;
 }
 
 main {
-  background-color: rgb(89, 175, 128);
+  display: flex;
+  background-color: rgb(120, 177, 145);
+}
+.lower-section {
+  background-color: rgb(238, 65, 76);
+}
+
+.form {
+  display: flex;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+input[type='date'] {
+  text-align: center;
+}
+
+.directory-title {
+  background-color: rgb(238, 65, 76);
+  margin: 0rem;
+}
+
+.employee-database {
+  background-color: rgb(238, 65, 76);
+}
+
+.employee-detail-section {
+  background-color: rgb(238, 65, 76);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.employee {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px;
+  margin: 1rem;
+}
+
+.employee-detail-info {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: column;
 }

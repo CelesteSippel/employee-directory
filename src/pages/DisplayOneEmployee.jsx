@@ -19,7 +19,7 @@ const DisplayOneEmployee = props => {
     <>
       <h1 className="directory-title">Pizza by the Slice Employee</h1>
       <main className="employee-section"></main>
-      <section className="employee-detail-section">
+      <section className="employee-detail-section employee">
         <img src={`${employeeData.profileImage}`} alt="employee photo" />
         <section className="employee-detail-info">
           <h2>
@@ -43,6 +43,8 @@ const DisplayOneEmployee = props => {
             <p>Phone Number:</p>
             {employeeData.phoneNumber}
           </div>
+        </section>
+        <section className="employee-detail-info">
           <div className="info">
             <p>Address:</p>
             {employeeData.address}

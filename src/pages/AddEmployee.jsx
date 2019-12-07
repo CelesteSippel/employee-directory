@@ -47,7 +47,7 @@ const AddEmployee = () => {
   }
 
   return (
-    <div>
+    <div className="lower-section">
       <h1 className="form">Add Employee</h1>
       <main className="form-section">
         <form onSubmit={submitData} className="add-employee-form">
