@@ -3,7 +3,7 @@ import axios from 'axios'
 import moment from 'moment'
 
 const DisplayOneEmployee = props => {
-  const [employeeData, setEmployeeData] = useState({})
+  const [employeeData, setEmployeeData] = useState([])
   const getEmployeeData = async () => {
     const data = props.match.params.id
     const resp = await axios.get(

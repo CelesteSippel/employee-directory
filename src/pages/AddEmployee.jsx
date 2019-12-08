@@ -50,7 +50,13 @@ const AddEmployee = () => {
     <div className="lower-section">
       <h1 className="form">Add Employee</h1>
       <main className="form-section">
-        <form onSubmit={submitData} className="add-employee-form">
+        <form
+          onSubmit={e => {
+            submitData(e)
+            alert('Employee Added')
+          }}
+          className="add-employee-form"
+        >
           <div className="form-style">
             <label htmlFor="first-name">First Name:</label>
             <input
@@ -228,6 +234,7 @@ const AddEmployee = () => {
           </div>
         </form>
       </main>
+      <footer>Made with 💛 at SDG</footer>
     </div>
   )
 }

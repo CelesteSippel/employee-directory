@@ -83,6 +83,7 @@ main {
   display: flex;
   margin-top: 0rem;
   margin-bottom: 1rem;
+  background-color: white;
 }
 
 input[type='date'] {
@@ -95,7 +96,15 @@ input[type='date'] {
 }
 
 .employee-database {
-  background-color: rgb(238, 65, 76);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: white;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  background-color: white;
+  justify-content: space-around;
 }
 
 .employee-detail-section {
@@ -120,4 +129,28 @@ input[type='date'] {
   display: flex;
   flex-wrap: wrap-reverse;
   flex-direction: column;
+}
+
+.employee-card {
+  background-color: rgb(238, 65, 76);
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+
+  border-radius: 5px;
+  border: solid 3px black;
+  width: 40rem;
+
+  justify-content: space-around;
+}
+
+.company-name {
+  font-size: 4rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding-bottom: 4rem;
 }

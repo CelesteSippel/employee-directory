@@ -21,7 +21,7 @@ const AllEmployees = () => {
 
   return (
     <>
-      <h1 className="directory-title">Pizza by the Slice</h1>
+      <h1 className="directory-title"></h1>
       <main className="employee-database">
         {employeeData.map((item, i) => {
           return (

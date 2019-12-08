@@ -8,7 +8,9 @@ const NavBar = () => {
         {' '}
         <img src={top} />
       </Link>
-
+      <section>
+        <h1 className="company-name">Pizza by the Slice</h1>
+      </section>
       <section className="menu">
         <Link to="/">
           <section className="nav-link">All Employees</section>
