@@ -31,8 +31,9 @@ const DisplayOneEmployee = props => {
             {employeeData.fullTime}
           </div>
           <div className="info">
-            <p>Hire Date:</p>
-            {employeeData.hireDate}
+            <p>Hired Date:</p>
+            {employeeData.hiredDate &&
+              moment(employeeData.hiredDate).format('MMM Do YYYY')}
           </div>
           <div className="info">
             <p>Date of Birth:</p>
@@ -61,7 +62,7 @@ const DisplayOneEmployee = props => {
             {employeeData.email}
           </div>
           <div className="info">
-            <p>Emergency Contact: </p>
+            <p>Emergency Contact Person: </p>
             {employeeData.emergencyContactPerson}
           </div>
           <div className="info">

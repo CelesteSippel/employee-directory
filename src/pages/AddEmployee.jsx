@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
 
 const AddEmployee = () => {
+  const [resetForm, setResetForm] = useState(false)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [birthday, setBirthday] = useState('')
-  const [hireDate, setHireDate] = useState('')
+  const [hiredDate, setHiredDate] = useState('')
   const [jobTitle, setJobTitle] = useState('')
   const [jobDescription, setJobDescription] = useState('')
   const [isFullTime, setIsFullTime] = useState(true)
@@ -15,7 +17,7 @@ const AddEmployee = () => {
   const [city, setCity] = useState('')
   const [state, setState] = useState('')
   const [zip, setZip] = useState('')
-  const [emergencyContact, setEmergencyContact] = useState('')
+  const [emergencyContactPerson, setEmergencyContactPerson] = useState('')
   const [emergencyContactPhone, setEmergencyContactPhone] = useState('')
   const [profileImage, setProfileImage] = useState('')
   const [ptoHours, setPtoHours] = useState('')
@@ -29,27 +31,31 @@ const AddEmployee = () => {
         firstName: firstName,
         lastName: lastName,
         birthday: birthday,
-        hiredDate: hireDate,
+        hiredDate: hiredDate,
         jobTitle: jobTitle,
         jobDescription: jobDescription,
-
+        phoneNumber: phoneNumber,
         address: address,
         city: city,
         state: state,
         zip: zip,
-
+        email: email,
+        emergencyContactPerson: emergencyContactPerson,
+        emergencyContactPhone: emergencyContactPhone,
         ptoHours: ptoHours,
         isFullTime: isFullTime,
         profileImage: profileImage,
       }
     )
     console.log(resp.data)
+    setResetForm(true)
   }
 
   return (
     <div className="lower-section">
       <h1 className="form">Add Employee</h1>
       <main className="form-section">
+        {resetForm && <Redirect to="/" />}
         <form
           onSubmit={e => {
             submitData(e)
@@ -88,13 +94,13 @@ const AddEmployee = () => {
             />
           </div>
           <div className="form-style">
-            <label htmlFor="hired-date">Hire Date:</label>
+            <label htmlFor="hired-date">Hired Date:</label>
             <input
               onChange={e => {
-                setHireDate(e.target.value)
+                setHiredDate(e.target.value)
               }}
               type="date"
-              value={hireDate}
+              value={hiredDate}
             />
           </div>
           <div className="form-style">
@@ -191,10 +197,10 @@ const AddEmployee = () => {
             <label htmlFor="emergency-contact-person">Emergency Contact:</label>
             <input
               onChange={e => {
-                setEmergencyContact(e.target.value)
+                setEmergencyContactPerson(e.target.value)
               }}
               type="text"
-              value={emergencyContact}
+              value={emergencyContactPerson}
             />
           </div>
           <div className="form-style">
